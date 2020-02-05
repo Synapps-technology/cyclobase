@@ -1,8 +1,10 @@
 <template>
   <div class="login">
-    <input type="text" v-model="modelUsername" placeholder="Nom d'utilisateur"><br>
-    <input type="password" v-model="modelPassword" placeholder="Mot de passe"><br>
-    <button @click="sendCredential">Envoyer</button>
+    <form v-on:submit.prevent="sendCredential">
+      <input type="text" placeholder="Nom d'utilisateur"><br>
+      <input type="password" placeholder="Mot de passe"><br>
+      <button type="submit" >Envoyer</button>
+    </form>
     <div v-bind:class="getClass()" v-show="message!==''">
       <i class="fa fa-times-circle"></i>
         {{ message }}
@@ -15,20 +17,18 @@
   export default {
     template: '#login',
     name: "Login",
-    data () {
+    data : function () {
       return  {
-        modelUsername: "",
-        modelPassword: "",
         message: "",
         hasError: false
       }
     },
     methods: {
-      sendCredential : function () {
+      sendCredential : function (event) {
 
         var payload = {
-          userName: this.modelUsername,
-          password: this.modelPassword
+          userName: event.target[0].value,
+          password: event.target[1].value
         };
 
         var self = this;
@@ -43,6 +43,7 @@
           .then(function (response) {
             self.message = "Authentification success !"
             //TODO go to next view (list User)
+            self.$router.push('/users')
           })
           .catch(function (error) {
             console.log(error);

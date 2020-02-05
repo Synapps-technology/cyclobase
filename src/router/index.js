@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import UserList from '@/components/UserList'
 import Login from '@/components/Login'
+import AddUserForm from '@/components/AddUserForm'
+
 
 
 Vue.use(Router)
@@ -9,14 +11,19 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'HelloWorld',
+      path: '/users',
+      name: 'UserList',
+      component: UserList
+    },
+    {
+      path: '/login',
+      name: 'Login',
       component: Login
     },
     {
-      path: '/logn',
-      name: 'Login',
-      component: Login
+      path: '/users/add',
+      name: 'AddUserForm',
+      component: AddUserForm
     }
   ]
 })
