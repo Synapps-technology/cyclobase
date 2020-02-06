@@ -1,11 +1,11 @@
 <template>
   <div class="userList">
-    <ul id="v-for-object" class="demo">
+    <b-list-group>
       Liste des utilisateurs
-      <li v-for="user in userList">
+      <b-list-group-item v-for="user in userList" v-bind:key="user.id">
         {{ user.username }}
-      </li>
-    </ul>
+      </b-list-group-item>
+    </b-list-group>
     <button v-on:click="$router.push('/users/add')">Ajouter un utilisateur</button>
   </div>
 </template>

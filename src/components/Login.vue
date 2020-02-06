@@ -41,13 +41,14 @@
               headers: {'Content-Type': 'application/json'}
             })
           .then(function (response) {
-            self.message = "Authentification success !"
-            //TODO go to next view (list User)
+            console.log( "Authentification success !");
+            self.$store.dispatch('login',this);
+            //TODO push to dashboard
             self.$router.push('/users')
           })
           .catch(function (error) {
             console.log(error);
-            self.message = "Error, wrong credentials"
+            self.message = "Error, wrong credentials";
             self.hasError = true
 
           })

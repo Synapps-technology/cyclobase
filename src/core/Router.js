@@ -13,7 +13,10 @@ export default new Router({
     {
       path: '/users',
       name: 'UserList',
-      component: UserList
+      component: UserList,
+      meta: {
+        requiresAuth: true
+      }
     },
     {
       path: '/login',
@@ -23,7 +26,10 @@ export default new Router({
     {
       path: '/users/add',
       name: 'AddUserForm',
-      component: AddUserForm
+      component: AddUserForm,
+      meta: {
+        requiresAuth: true
+      }
     }
   ]
 })
