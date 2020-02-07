@@ -8,14 +8,14 @@
       <b-collapse id="nav-collapse" is-nav >
         <b-navbar-nav>
 
-          <b-nav-item href="#/users/">Users</b-nav-item>
-          <b-nav-item href="#" disabled>Jeux d'item</b-nav-item>
-          <b-nav-item href="#" disabled>Relevés</b-nav-item>
+          <b-nav-item href="#/users/">Administration des utilisateurs</b-nav-item>
+          <b-nav-item href="#" disabled>Gestion des jeux d'item</b-nav-item>
+          <b-nav-item href="#" disabled>Visualisation des relevés</b-nav-item>
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
-          <b-nav-item v-on:click="logout" right>Deconnexion</b-nav-item>
+          <b-nav-item v-on:click="logout" right v-show="$store.getters.isLoggedIn">Deconnexion</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
