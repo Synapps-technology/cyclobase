@@ -9,8 +9,8 @@
         <b-navbar-nav>
 
           <b-nav-item href="#/users/">Administration des utilisateurs</b-nav-item>
-          <b-nav-item href="#" disabled>Gestion des jeux d'item</b-nav-item>
-          <b-nav-item href="#" disabled>Visualisation des relevés</b-nav-item>
+          <b-nav-item href="#" class="navbar-item-disabled">Gestion des jeux d'item</b-nav-item>
+          <b-nav-item href="#" class="navbar-item-disabled">Visualisation des relevés</b-nav-item>
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->

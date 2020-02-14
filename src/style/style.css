@@ -32,6 +32,21 @@
   min-height: 100vh;
 }
 
+.centered-horizontaly {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.pagetitle{
+  text-align: center;
+  font-size: 20px;
+  margin-top: 70px;
+  margin-bottom: 35px;
+}
+
 /* Just for CodePen styling - don't include if you copy paste */
 html {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -42,16 +57,22 @@ html {
   font-weight: 300;
 }
 
+.navbar-item-disabled{
+  pointer-events: none;
+  color: white;
+}
+
 img{
   width:auto;
   height:100%;
   object-fit:cover;
 }
 
+
 /* FORM TYPOGRAPHY*/
 
 input[type=button], input[type=submit], input[type=reset]  {
-  background-color: #56baed;
+  background-color: #00637c;
   border: none;
   color: white;
   padding: 15px 80px;
@@ -73,7 +94,7 @@ input[type=button], input[type=submit], input[type=reset]  {
 }
 
 input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
-  background-color: #00637c;
+  background-color: #56baed;
 }
 
 input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
@@ -113,6 +134,8 @@ input[type=text]:focus {
 input[type=text]:placeholder {
   color: #cccccc;
 }
+
+
 
 
 

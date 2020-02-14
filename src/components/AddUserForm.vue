@@ -1,10 +1,13 @@
-<template>
-  <div class="addUserForm">
-    Ajouter un utilisateur
-    <form v-on:submit.prevent="addUser">
-      <input type="text" placeholder="Nom d'utilisateur"><br>
-      <input type="password" placeholder="Mot de passe"><br>
-      <button type="submit" >Ajouter</button>
+<template xmlns="http://www.w3.org/1999/html">
+  <div class="centered-horizontaly">
+    <div class="pagetitle">Ajouter un utilisateur</div>
+    <form class="addUserForm" v-on:submit.prevent="addUser">
+      <input type="text" placeholder="Nom d'utilisateur *"><br>
+      <input type="text" placeholder="Mot de passe *"><br>
+      <input type="text" placeholder="Prénom"><br>
+      <input type="text" placeholder="Nom"><br>
+      <input type="text" placeholder="Adresse email"><br>
+      <input type="submit"  value="Ajouter"/>
     </form>
     <div v-bind:class="getClass()" v-show="message!==''">
       <i class="fa fa-times-circle"></i>
@@ -58,5 +61,7 @@
 </script>
 
 <style scoped>
-
+.addUserForm{
+  width: 640px;
+}
 </style>

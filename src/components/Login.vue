@@ -1,7 +1,7 @@
 <template>
-  <div class="centered">
-    <h5>Bienvenue sur l'interface Back office de CycloBase</h5>
-    <h7>Veuillez vous identifier pour accéder aux fonctionnalités</h7>
+  <div class="centered-horizontaly">
+    <div class="pagetitle">Bienvenue sur l'interface Back office de CycloBase</div>
+    <h6>Veuillez vous identifier pour accéder aux fonctionnalités</h6>
     <div class="wrapper fadeInDown">
       <div id="formContent">
         <div class="loginForm">
